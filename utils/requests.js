@@ -44,6 +44,10 @@ export default{
         title:"TV Movie",
         url:`/discover/movie?api_key=${API_KEY}&with_genres=10770`
     },
+    fetchPG:{
+        title:"PG",
+        url:`/discover/movie?api_key=${API_KEY}&include_adult=false`
+    },
   
    
 }

@@ -26,18 +26,18 @@ const Details = ({movieData}) => {
     <div className='m-4'>
     <Image layout='responsive' src={`${BASE_URL}${movieData.backdrop_path}`||`${BASE_URL}${movieData.poster_path}`} style={{borderRadius:"0.5em"}} width={800} height={500}></Image>
     </div>
-    <p className='uppercase mt-3 mb-3 text-center'>{movieData.title}</p>
+    <p className='uppercase mt-3 mb-3 text-center '>{movieData.title}</p>
     <div className='m-3'>
        <p className='text-center m-3'>{movieData.overview}</p>
        <p className='text-center capitalize  m-3'>release date : {movieData.release_date ||movieData.first_air_date}</p>
        <p className='text-center capitalize m-3'>voting count: {movieData.vote_count} </p>
        <p className='text-center capitalize m-3'>average votes: {movieData.vote_average} ★</p>
         </div>
-        <h1 className='uppercase m-4 border-b-2 border-gray-800'>{movieData.title} on youtube : </h1>
-    <div className='sm:grid m:grid-cols-2 xl:grid-cols-3 text-center'>
+        <h1 className='uppercase m-4 border-b-2 border-gray-800 font-bold'>{movieData.title} on youtube : </h1>
+    <div className='sm:grid m:grid-cols-2 xl:grid-cols-3 gap-4 text-center'>
       {movieVideos.slice(0,6).map((item,index)=>(
-        <a key={index}  href={`https://www.youtube.com/watch?v=${item.video.videoId}`} target="_blank"> 
-          <img style={{borderRadius:"0.5em"}} className=" max-w-md  m-4" src={item.video.thumbnails[0].url} alt={item.video.title}></img>
+        <a key={index}  href={`https://www.youtube.com/watch?v=${item.video.videoId}`} target="_blank" rel="noreferrer"> 
+          <img style={{borderRadius:"0.5em"}} className=" max-w-md min-w-full m-4" src={item.video.thumbnails[0].url} alt={item.video.title}></img>
           <p className=' m-4'>{item.video.title.slice(0,50)}</p>
           <p className='m-4'>{item.video.channelName}</p>
 

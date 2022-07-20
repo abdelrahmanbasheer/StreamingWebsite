@@ -28,7 +28,7 @@ function Header() {
     <p className="opacity-0 group-hover:opacity-100 tracking-widest">TRENDING</p>
     </div>
     </Link>
-        <Link href="/" passHref>
+        <Link href="/?genre=fetchPG" passHref>
     <div className=" flex flex-col items-center cursor-pointer  group w-12 sm:w-20 hover:text-white ">
     <BadgeCheckIcon className="h-8 mb-1 group-hover:animate-bounce"></BadgeCheckIcon>
     <p className="opacity-0 group-hover:opacity-100 tracking-widest">PG</p>
@@ -40,13 +40,13 @@ function Header() {
     <p className="opacity-0 group-hover:opacity-100 tracking-widest">COLLECTIONS</p>
     </div>
     </Link>
-        <Link href="/" passHref>
+        <Link href="/search" passHref>
     <div className=" flex flex-col items-center cursor-pointer  group w-12 sm:w-20 hover:text-white ">
     <SearchIcon className="h-8 mb-1 group-hover:animate-bounce"></SearchIcon>
     <p className="opacity-0 group-hover:opacity-100 tracking-widest">SEARCH</p>
     </div>
     </Link>
-        <Link href="/" passHref>
+        <Link href="/account" passHref>
     <div className=" flex flex-col items-center cursor-pointer  group w-12 sm:w-20 hover:text-white ">
     <UserIcon className="h-8 mb-1 group-hover:animate-bounce"></UserIcon>
     <p className="opacity-0 group-hover:opacity-100 tracking-widest">ACCOUNT</p>
@@ -54,7 +54,7 @@ function Header() {
     </Link>
 
         </div>
-     <Link href="/" passHref><Image src="https://links.papareact.com/ua6" width="200" height="100"  className="cursor-pointer"></Image></Link>
+     <Image src="https://links.papareact.com/ua6" width="200" height="100"  className="cursor-pointer"></Image>
         
          </header>
   )

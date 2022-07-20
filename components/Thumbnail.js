@@ -1,6 +1,7 @@
 import { ThumbUpIcon } from "@heroicons/react/outline"
 import Image from "next/image"
 import Link from "next/link"
+import notfoundimage from "../public/image-not-found.jpg"
 const Thumbnail = ({result}) => {
     const BASE_URL="https://image.tmdb.org/t/p/original/"
   return (
@@ -11,7 +12,9 @@ const Thumbnail = ({result}) => {
         layout="responsive" 
         height={1080} 
         width={1920}
-        src={`${BASE_URL}${result.backdrop_path}`||`${BASE_URL}${result.poster_path}`}
+        src={`${BASE_URL}${result.backdrop_path}`||`${BASE_URL}${result.poster_path} `|| notfoundimage}
+        blurDataURL={`${BASE_URL}${result.backdrop_path}`||`${BASE_URL}${result.poster_path}`}
+        placeholder="blur"
         ></Image>
         <div className="p-2">
         <p className="truncate max-w-md">{result.overview}</p>
