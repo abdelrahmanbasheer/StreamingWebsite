@@ -1,10 +1,13 @@
 import { ThumbUpIcon } from "@heroicons/react/outline"
 import Image from "next/image"
+import Link from "next/link"
 const Thumbnail = ({result}) => {
     const BASE_URL="https://image.tmdb.org/t/p/original/"
   return (
+    <Link href={`/movie/${result.id}?api_key=3a37fda9c777a4585a7e9b0d4c083533&language=en-US`}>
     <div className="group cursor-pointer p-2 transition  duration-200 ease-in transform sm:hover:scale-105 hover:z-50 ">
         <Image 
+        style={{borderRadius:"0.5em"}}
         layout="responsive" 
         height={1080} 
         width={1920}
@@ -17,6 +20,7 @@ const Thumbnail = ({result}) => {
         </div>
         
     </div>
+    </Link>
   )
 }
 
